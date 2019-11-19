@@ -4,6 +4,8 @@
 
 This is a docker image to run the Lem_ editor and start coding in `Common Lisp`_.
 
+.. image:: https://github.com/cxxxr/lem/raw/master/screenshots/terminal.png
+
 How to use it
 =============
 
