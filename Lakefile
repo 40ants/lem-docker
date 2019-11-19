@@ -1,0 +1,19 @@
+#|-*- mode:lisp -*-|#
+
+;; To use this, you will need a "lake":
+;; https://github.com/takagi/lake
+
+(defvar *version* "0.1.0")
+
+
+(task "build" ()
+  (sh #?"docker build -t 40ants/lem:${*version*} -t 40ants/lem:latest ."))
+
+
+(task "push" ()
+  (sh #?"docker push 40ants/lem:${*version*}")
+  (sh #?"docker push 40ants/lem:latest"))
+
+
+(task "default" ("build")
+  (echo "Done."))
